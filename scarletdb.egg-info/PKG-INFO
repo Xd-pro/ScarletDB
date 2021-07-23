@@ -7,7 +7,9 @@ Author: Finnbar McC
 Author-email: xfinnbar@gmail.com
 License: MIT
 Download-URL: https://github.com/Xd-pro/ScarletDB/archive/refs/tags/0.1-beta.tar.gz
-Description: Basic document database mostly intended for use on [replit](https://replit.com).
+Description: # [Docs](https://github.com/Xd-pro/ScarletDB/wiki/ScarletDB)
+        
+        Basic document database mostly intended for use on [replit](https://replit.com).
         ```py
         db = ScarletDB([])
         db.replit("data") # data is replit db the key that the database is stored in

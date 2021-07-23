@@ -6,7 +6,7 @@ with open("README.md", encoding="utf-8") as file:
 setup(
   name = 'scarletdb',         # How you named your package folder (MyLib)
   packages = ['scarletdb'],   # Chose the same as "name"
-  version = '0.2',      # Start with a small number and increase it with every change you make,
+  version = '0.3',      # Start with a small number and increase it with every change you make,
   description = "Light document database.",
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   long_description=long_desc,

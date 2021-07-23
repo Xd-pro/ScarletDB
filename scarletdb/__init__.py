@@ -118,7 +118,7 @@ class ScarletDB:
     if query_by_index:
       inds = [self.list[query]]
     else:
-      inds = self.get(query, return_indicies=True)
+      inds = self.get(query, return_indices=True)
     for i in inds:
       for key in value.keys():
         self.list[i][key] = value[key]
@@ -129,14 +129,18 @@ class ScarletDB:
     self.commit = self._replit_commit
     self._replit_name = name
     if name not in rdb.keys():
-      rdb[name] = []
-    self.list = json.loads(rdb.get_raw(name))
+      rdb[name] = "[]"
+    try:
+      self.list = json.loads(json.loads(rdb.get_raw(name)))
+    except TypeError: # backwards compatible
+      rdb[name] = rdb.dumps(rdb[name])
     self.commit()
 
   def clear(self):
     self.list = []
     self.structure()
+    self.commit()
 
   def _replit_commit(self):
-    rdb[self._replit_name] = self.list
+    rdb[self._replit_name] = json.dumps(self.list)
 

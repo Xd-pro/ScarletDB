@@ -1,4 +1,4 @@
-from main import ScarletDB
+from scarletdb import ScarletDB
 
 db = ScarletDB([])
 db.replit("data") # data is replit db the key that the database is stored in
