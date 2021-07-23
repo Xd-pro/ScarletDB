@@ -1,17 +1,17 @@
-from distutils.core import setup
+from setuptools import setup
 
-def get_description():
-  with open("README.md") as file:
-    return file.read()
+with open("README.md", encoding="utf-8") as file:
+  long_desc = file.read()
 
 setup(
   name = 'scarletdb',         # How you named your package folder (MyLib)
   packages = ['scarletdb'],   # Chose the same as "name"
-  version = '0.1',      # Start with a small number and increase it with every change you make,
+  version = '0.2',      # Start with a small number and increase it with every change you make,
   description = "Light document database.",
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  long_description=get_description(),
-  author = 'YOUR NAME',                   # Type in your name
+  long_description=long_desc,
+  long_description_content_type="text/markdown",
+  author = 'Finnbar McC',                   # Type in your name
   author_email = 'xfinnbar@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/xd-pro/scarletdb',   # Provide either the link to your github or to your website
   download_url = 'https://github.com/Xd-pro/ScarletDB/archive/refs/tags/0.1-beta.tar.gz',    # I explain this later on

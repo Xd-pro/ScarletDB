@@ -68,7 +68,7 @@ class ScarletDB:
       retval.append(self.list[index])
     return retval'''
 
-  def get(self, query: Union[dict, int], one: bool = False, return_indicies=False, query_by_index=False):
+  def get(self, query: Union[dict, int], one: bool = False, return_indices=False, query_by_index=False) -> List[dict]:
     fresult = []
     indexes = []
     result = []
@@ -90,7 +90,7 @@ class ScarletDB:
           result.append(res)
     else:
       result = fresult
-    if not return_indicies:
+    if not return_indices:
       return result
     else:
       return done_indexes
