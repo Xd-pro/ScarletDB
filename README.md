@@ -1,3 +1,5 @@
+# [Docs](https://github.com/Xd-pro/ScarletDB/wiki/ScarletDB)
+
 Basic document database mostly intended for use on [replit](https://replit.com).
 ```py
 db = ScarletDB([])
